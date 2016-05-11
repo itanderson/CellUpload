@@ -29,10 +29,9 @@ void CellPipe_Init(void)
 	 CellPipe_USART_Config(115200);
 	 CellPipe_NVIC_Config();
 
-	 GPIO_ResetBits(GPIOA,GPIO_Pin_14);
-	 GPIO_ResetBits(GPIOA,GPIO_Pin_15);
-	 GPIO_SetBits(GPIOC,GPIO_Pin_3);
-	 GPIO_ResetBits(GPIOC,GPIO_Pin_13);
+	 Cell_ModemEN(Bit_SET);
+	 Cell_HW_SHTDN(Bit_RESET);
+	 Cell_OnOff(Bit_RESET);
 
 	 Timeout_Init();
 
